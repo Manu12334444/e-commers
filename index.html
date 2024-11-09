@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi E-commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el modo nocturno */
+        .modo-nocturno {
+            background-color: #121212;
+            color: #000000;
+        }
+    </style>
+     <!-- Incluir jQuery desde CDN -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+     <!-- Contenido de la página -->
+      <!-- Header con barra de búsqueda y menú -->
+     <header>
+        <div class="logo" id="logo">
+            <h1>Mi Tienda</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos..." id="searchBar">
+            <button id="searchButton">Buscar</button>
+        </div>
+       
+    </div>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#">Inicio</a></li>
+                <!-- Categorías con barra desplegable -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Categorías</a>
+                    <div class="dropdown-content">
+                        <a href="#">Electrónica</a>
+                        <a href="#">Ropa</a>
+                        <a href="#">Hogar</a>
+                        <a href="#">Deportes</a>
+                    </div>  
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Accesibilidad</a>
+                    <div class="dropdown-content">
+                     
+                        <a id="modoNocturnoBtn">Activar Modo Nocturno</a>
+                         <a id="cambiarColorBtn">Cambiar Color de Fondo</a>
+                         <a id="mostrarHoraBtn">Mostrar Hora Actual</a>
+                    </div>    
+                <li><a href="ofertas.html">Ofertas</a></li> <!-- Enlace a la nueva página de ofertas -->
+                <li><a href="#">Cuenta</a></li>
+                
+            </ul>
+             
+        </nav>
+      
+    </header>
+    
+     <!-- Productos en la página principal -->
+    <div class="productos">
+        <div>
+            <article class="product">
+            <img src="https://via.placeholder.com/200" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>Descripción del producto 1</p>
+                <span class="price">$19.99</span>
+                <button onclick="agregarProducto('Producto 1', 1)">Agregar al carrito</button>
+            </article>
+        </div>
+        <div>
+            <article class="product">
+            <img src="https://via.placeholder.com/200" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <p>Descripción del producto 1</p>
+                <span class="price">$19.99</span>
+            <button onclick="agregarProducto('Producto 2', 1)">Agregar al carrito</button>
+            </article>
+        </div>
+        <div>
+            <article class="product">
+                <img src="https://via.placeholder.com/200" alt="Producto 3">
+                <h3>Producto 2</h3>
+                <p>Descripción del producto 3</p>
+                    <span class="price">$19.99</span>
+                <button onclick="agregarProducto('Producto 3', 1)">Agregar al carrito</button>
+                </article>
+        </div>
+        <article class="product">
+            <img src="https://via.placeholder.com/200" alt="Producto 4">
+            <h3>Producto 4</h3>
+            <p>Descripción del producto 4</p>
+                <span class="price">$19.99</span>
+            <button onclick="agregarProducto('Producto 4', 1)">Agregar al carrito</button>
+        </article>
+    </div>
+
+    <!-- Botón para abrir el carrito lateral -->
+    <li><a id="abrirCarrito">Carrito</a></li>
+
+    <!-- Carrito Lateral -->
+    <div id="carritoLateral">
+        <div style="padding: 25px;">
+            <h2>Carrito de Compras</h2>
+            
+            <div id="carritoItems">
+                <!-- Aquí se mostrarán los items del carrito -->
+            
+            </div>
+            <br>
+            <button id="cerrarCarrito">Cerrar</button>
+        </div>
+    </div>
+
+    <p id="horaActual"></p> <!-- Elemento para mostrar la hora actual -->
+    
+    <script>
+        // 1. Función para activar/desactivar el modo nocturno
+        function toggleModoNocturno() {
+            document.body.classList.toggle('modo-nocturno');
+        }
+
+        // 2. Función para cambiar el color de fondo de la página
+        function cambiarColorFondo() {
+            const colores = ['#ffeb3b', '#4caf50', '#2196f3', '#e91e63'];
+            const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+            document.body.style.backgroundColor = colorAleatorio;
+        }
+
+        // 3. Función para mostrar la hora actual
+        function mostrarHoraActual() {
+            const ahora = new Date();
+            const hora = ahora.toLocaleTimeString();
+            document.getElementById('horaActual').textContent = `Hora actual: ${hora}`;
+        }
+
+        // Eventos personalizados
+
+        // Evento para activar el modo nocturno al hacer clic en el botón
+        document.getElementById('modoNocturnoBtn').addEventListener('click', toggleModoNocturno);
+
+        // Evento para cambiar el color de fondo al hacer clic en el botón
+        document.getElementById('cambiarColorBtn').addEventListener('click', cambiarColorFondo);
+
+        // Evento para mostrar la hora actual al hacer clic en el botón
+        document.getElementById('mostrarHoraBtn').addEventListener('click', mostrarHoraActual);
+    </script>
+
+   
+
+    <!-- Scripts para controlar el carrito -->
+    <script>
+        $(document).ready(function(){
+            // Función para abrir el carrito lateral
+            function abrirCarrito() {
+                $('#carritoLateral').show();
+            }
+
+            // Función para cerrar el carrito lateral
+            $('#cerrarCarrito').click(function() {
+                $('#carritoLateral').hide();
+            });
+
+            // Función para agregar un producto al carrito
+            window.agregarProducto = function(nombre, cantidad) {
+                let item = `<div class="producto">
+                                <img src="https://via.placeholder.com/150" alt="Producto">
+                                <p>${nombre}</p>
+                                <input type="number" class="cantidad" value="${cantidad}">
+                                <button class="eliminar">X</button>
+                            </div>`;
+                $('#carritoItems').append(item);
+            }
+
+            // Simulación de abrir el carrito
+            $('#abrirCarrito').click(function() {
+                abrirCarrito();
+            });
+
+            // Función para manejar la eliminación de productos
+            $(document).on('click', '.eliminar', function() {
+                $(this).parent().remove();
+            });
+        });
+       
+    </script>
+    <!-- Resto del contenido -->
+    <!-- Banner principal -->
+    <section class="banner">
+        <h2>Ofertas del Día</h2>
+        <p>Hasta un 50% de descuento en productos seleccionados</p>
+        <button id="ofertasBtn">Ver Ofertas</button>
+    </section>
+
+    <!-- Categorías destacadas -->
+    <section class="categories">
+        <h2>Categorías Destacadas</h2>
+        <div class="category-grid">
+            <div class="category">
+                <img src="https://via.placeholder.com/150" alt="Categoría 1">
+                <h3>Electrónica</h3>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/150" alt="Categoría 2">
+                <h3>Ropa</h3>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/150" alt="Categoría 3">
+                <h3>Hogar</h3>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/150" alt="Categoría 4">
+                <h3>Deportes</h3>
+            </div>
+        </div>
+    </section>
+    <!-- Sección principal con productos -->
+    <main>
+        <section class="products-grid">
+            <!-- Productos -->
+            <article class="product">
+                <img src="https://via.placeholder.com/200" alt="Producto 1">
+                <h2>Producto 1</h2>
+                <p>Descripción del producto 1</p>
+                <span class="price">$19.99</span>
+                <button>Añadir al carrito</button>
+            </article>
+            <!-- Agrega más productos aquí -->
+        </section>
+    </main>
+    <script>
+        // Función personalizada para mostrar bienvenida
+        function mostrarBienvenida() {
+            const nombreTienda = "Mi Tienda";
+            alert(`¡Bienvenido a ${nombreTienda}! Nos alegra verte aquí.`);
+        }
+
+        // Función personalizada para resaltar barra de búsqueda
+        function resaltarBusqueda(elemento, colorFondo, colorBorde) {
+            elemento.style.backgroundColor = colorFondo;
+            elemento.style.border = `1px solid ${colorBorde}`;
+        }
+
+        // Función personalizada para mostrar mensaje de ofertas
+        function mostrarOfertas() {
+            const nombreTienda = "Mi Tienda";
+            alert(`¡Aprovecha las mejores ofertas en ${nombreTienda}! No te las pierdas.`);
+        }
+
+        // 1. Evento click en el logo que llama a la función mostrarBienvenida
+        document.getElementById('logo').addEventListener('click', mostrarBienvenida);
+
+        // 2. Evento hover en la barra de búsqueda que llama a resaltarBusqueda
+        const searchBar = document.getElementById('searchBar');
+        searchBar.addEventListener('mouseover', function() {
+            resaltarBusqueda(this, '#e0f7fa', '#00838f');
+        });
+        searchBar.addEventListener('mouseout', function() {
+            resaltarBusqueda(this, '', '');
+        });
+
+        // 3. Evento click en el botón de ofertas que llama a mostrarOfertas
+        document.getElementById('ofertasBtn').addEventListener('click', mostrarOfertas);
+    </script>
+    <!-- Footer con información adicional -->
+    <footer>
+        <p>© 2024 Mi Tienda. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+
