@@ -1,6 +1,6 @@
-# Vesture
+# E-commers
 
-**Vesture** es el prototipo de una tienda virtual desarrollada como una Single Page Application (SPA), diseñada para ofrecer una experiencia de usuario moderna e interactiva.
+**E-commers** es el prototipo de una tienda virtual desarrollada como una Single Page Application (SPA), diseñada para ofrecer una experiencia de usuario moderna e interactiva.
 
 ## Ejecución del programa
 
@@ -11,12 +11,12 @@ Antes de ejecutar este proyecto, asegúrate de tener instalado **Node.js** en tu
 
 1. Clona este repositorio en tu máquina local:
     ```bash
-    git clone https://github.com/tu-usuario/vesture.git
+    git clone https://github.com/tu-usuario/E-commers.git
     ```
 
 2. Entra al directorio del proyecto:
     ```bash
-    cd vesture
+    cd E-commers
     ```
 
 3. Ejecuta el servidor local con **npx servor** para correr la aplicación:
