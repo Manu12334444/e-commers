@@ -1,17 +1,7 @@
 const loginForm = document.getElementById("login-form");
 
-const customers = [
-  {
-    email: "admin@gmail.com",
-    password: "admin",
-    rol: "admin",
-  },
-  {
-    email: "manuel.99castro@gmail.com",
-    password: "123456",
-    rol: "user",
-  },
-];
+const customers = JSON.parse(localStorage.getItem('customers')) ?? [];
+console.log(customers)
 
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();

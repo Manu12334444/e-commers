@@ -116,9 +116,9 @@ main {
 
 .product-card {
   display: grid;
-  grid-template-rows: 3.75rem 1fr 3.75rem;
-  background-color: #c9c9c9;
-  border-radius: 8px;
+  grid-template-rows: 3.45rem 1fr 3.75rem;
+  background-color: #f1f1f1;
+  border-radius: 1.875rem;
 }
 
 .product-card__header {
@@ -131,6 +131,7 @@ main {
 .product-card__model {
   font-weight: bold;
   color: #626262;
+  
 }
 
 .product-card__favorite-btn {
@@ -144,13 +145,10 @@ main {
 }
 
 .product-card__image {
-  display: flex;
+  display: flex ;
+  
   justify-content: center;
   align-items: center;
-
-  img {
-    max-width: 120px;
-  }
 }
 
 .product-card__footer {
@@ -170,7 +168,7 @@ main {
   padding: 0.625rem 1.25rem;
   font-weight: bold;
   font-size: 0.875rem;
-  background-color: #fedfd0;
+  background-color: #f8fed0;
   border-radius: 1.875rem;
 }
 
