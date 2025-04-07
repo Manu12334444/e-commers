@@ -1,0 +1,182 @@
+[
+  {
+    "id": "b9412fc9-025f-48f8-9393-6b5310ba301c",
+    "model": "1906R",
+    "price": "$154.99",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 50,
+    "rating": 4
+  },
+  {
+    "id": "1f072fa4-5b30-4d4d-bfc5-90179c536d63",
+    "model": "574",
+    "price": "$120.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 30,
+    "rating": 5
+  },
+  {
+    "id": "a6b575d3-9b1b-4eab-b0ba-bdb7af20c028",
+    "model": "997",
+    "price": "$179.99",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 20,
+    "rating": 3
+  },
+  {
+    "id": "9e0af58f-c294-47e5-aac6-297bd96762b1",
+    "model": "1500",
+    "price": "$200.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 10,
+    "rating": 4
+  },
+  {
+    "id": "aad31706-1f7e-4849-adac-dce2a2c68c12",
+    "model": "990v5",
+    "price": "$175.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 15,
+    "rating": 5
+  },
+  {
+    "id": "1c073055-e4a3-4b53-9382-b085b1b332bd",
+    "model": "530",
+    "price": "$99.99",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 25,
+    "rating": 2
+  },
+  {
+    "id": "9465a68b-6cca-401f-b76e-d517fce827ba",
+    "model": "1500",
+    "price": "$220.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 5,
+    "rating": 1
+  },
+  {
+    "id": "a5720c4d-3083-434a-89d6-c1105d2dd37e",
+    "model": "574",
+    "price": "$120.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 35,
+    "rating": 4
+  },
+  {
+    "id": "3df70719-bc36-4b8f-9f3c-55d334acde3d",
+    "model": "1400",
+    "price": "$160.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 20,
+    "rating": 5
+  },
+  {
+    "id": "1e0726b1-4e47-4681-8786-5f1277eb215e",
+    "model": "1300",
+    "price": "$250.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 8,
+    "rating": 4
+  },
+  {
+    "id": "9e072e19-4730-4186-93a3-f1d891cc3fa3",
+    "model": "997H",
+    "price": "$90.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 45,
+    "rating": 3
+  },
+  {
+    "id": "2f07a124-6017-47cf-9f10-6ed02684388c",
+    "model": "990v4",
+    "price": "$180.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 12,
+    "rating": 5
+  },
+  {
+    "id": "7f0946b5-3b36-4a5d-a5e9-ec9f4c9aab39",
+    "model": "5740",
+    "price": "$120.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 9,
+    "rating": 4
+  },
+  {
+    "id": "afe71a4a-463e-4932-b51a-972f41d79b73",
+    "model": "992",
+    "price": "$175.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 16,
+    "rating": 5
+  },
+  {
+    "id": "13d74007-29f1-47a2-b897-2f13ab9ebf97",
+    "model": "550",
+    "price": "$110.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 40,
+    "rating": 3
+  },
+  {
+    "id": "28e2a8d2-f7b9-43d3-92ea-8fc72b646105",
+    "model": "327",
+    "price": "$100.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 20,
+    "rating": 4
+  },
+  {
+    "id": "27fa04db-c9bb-43fe-a154-931198db7ba8",
+    "model": "1080v11",
+    "price": "$150.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 13,
+    "rating": 5
+  },
+  {
+    "id": "15a60ec6-0a04-414f-8280-1930b03d7a07",
+    "model": "880v10",
+    "price": "$130.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 18,
+    "rating": 4
+  },
+  {
+    "id": "ee8f1bb5-706f-4f8a-b1e7-9b6a8b084c92",
+    "model": "FuelCell Rebel v2",
+    "price": "$140.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 22,
+    "rating": 3
+  },
+  {
+    "id": "9c03c953-c1a3-46c0-80d4-e6767dbb784b",
+    "model": "Fresh Foam X 1080v12",
+    "price": "$160.00",
+    "imageUrl": "/assets/images/product_1.png",
+    "category": "Shoes",
+    "stock": 25,
+    "rating": 5
+  }
+]

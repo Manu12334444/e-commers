@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vesture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <div class="cart">
+      <div class="cart-header">
+        <h1>Carrito</h1>
+
+        <button id="toggle-cart-btn">X</button>
+      </div>
+
+      <div id="cart-items"></div>
+    </div>
+
+    <header>
+      <h1 class="jaro-font">Mi tienda</h1>
+
+      <div id="links-container"></div>
+
+      <div class="actions" id="actions-container">
+        <button id="toggle-dark-mode-btn">
+          <img src="/assets/icons/dark_icon.png" alt="" />
+        </button>
+
+        <button>
+          <img src="/assets/icons/search_2_icon.png" alt="" />
+        </button>
+
+        <button>
+          <img src="/assets/icons/heart_icon.png" alt="" />
+        </button>
+
+        <button id="toggle-cart-btn">
+          <img src="/assets/icons/cart_icon.png" alt="" />
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Grid of products -->
+      <div class="products-grid" id="productsGrid"></div>
+    </main>
+  </body>
+</html>
