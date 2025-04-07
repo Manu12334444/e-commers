@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vesture</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <div class="cart">
+      <div class="cart-header">
+        <h1>Carrito</h1>
+
+        <button id="toggle-cart-btn">X</button>
+      </div>
+
+      <div id="cart-items"></div>
+    </div>
+
+    <header>
+      <h1 class="jaro-font">Tienda</h1>
+
+      <div id="links-container"></div>
+
+      <div class="actions" id="actions-container">
+        <button id="toggle-dark-mode-btn">
+          <img src="/assets/icons/dark_icon.png" alt="" />
+        </button>
+
+        <button>
+          <img src="/assets/icons/search_2_icon.png" alt="" />
+        </button>
+
+        <button>
+          <img src="/assets/icons/heart_icon.png" alt="" />
+        </button>
+
+        <button id="toggle-cart-btn">
+          <img src="/assets/icons/cart_icon.png" alt="" />
+        </button>
+      </div>
+    </header>
+
+    <main>
+        <!-- Grid of products -->
+        <div class="products-grid" id="productsGrid"></div>
+    </main>
+    <form action="/login" method="POST">
+      <input type="text" name="username" placeholder="Nombre de usuario" required />
+      <input type="password" name="password" placeholder="Contraseña" required />
+      <button type="submit">Iniciar sesión</button>
+  </form>
+  
+    <form action="/register" method="POST">
+      <input type="text" name="username" placeholder="Nombre de usuario" required />
+      <input type="email" name="email" placeholder="Correo electrónico" required />
+      <input type="password" name="password" placeholder="Contraseña" required />
+      <button type="submit">Registrarse</button>
+  </form>
+  
+  </body>
+</html>
